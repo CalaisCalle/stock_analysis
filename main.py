@@ -1,7 +1,10 @@
 '''Main: Analyses some stocks or something idk'''
-import alpha_vantage
+from alpha_vantage import base
 
 def main():
+    av = base.alpha_vantage_base()
+    r = av.time_series("IBM")
+    print(r.json())
     pass
 
 if __name__=="__main__":
